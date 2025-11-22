@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="22.1.0" type="device">
+  <diagram id="genbank-blast-architecture" name="Arquitectura General">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title" value="ARQUITECTURA GENERAL - GenBank BLAST Redesign" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Usuario -->
+        <mxCell id="user" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FC10C3;strokeColor=#A50040;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Browser Container -->
+        <mxCell id="browser-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="80" width="800" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="browser-label" value="NAVEGADOR WEB (Cliente)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="190" y="85" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- React App Container -->
+        <mxCell id="react-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#704BFF;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="115" width="760" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="react-label" value="REACT APPLICATION (TypeScript + Vite)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#704BFF;" vertex="1" parent="1">
+          <mxGeometry x="210" y="120" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- App.tsx - State Manager -->
+        <mxCell id="app-state" value="App.tsx&#xa;(State Router)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#21D7FF;strokeColor=#0097A7;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="145" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Módulo 1: Configuración y Búsqueda -->
+        <mxCell id="mod1-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4F9;strokeColor=#FC10C3;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod1-title" value="MÓDULO 1: BÚSQUEDA" style="text;html=1;strokeColor=none;fillColor=#FC10C3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="blast-home" value="BlastHome.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="240" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="blast-form" value="BlastSearchForm.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="270" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="blast-status" value="BlastSearchStatus.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="mod1-reqs" value="R1-R7" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#FC10C3;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="325" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Módulo 2: Resultados -->
+        <mxCell id="mod2-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#704BFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod2-title" value="MÓDULO 2: RESULTADOS" style="text;html=1;strokeColor=none;fillColor=#704BFF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="410" y="210" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="blast-results" value="BlastResults.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="420" y="240" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="results-tabs" value="Tabs: Descripciones | Gráfica&#xa;Alineamientos | Taxonomía" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="420" y="270" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="results-filters" value="Filtros + Ordenamiento + Export" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="420" y="310" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mod2-reqs" value="R8-R14, R20" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#704BFF;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="325" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Módulo 3: NUCCORE -->
+        <mxCell id="mod3-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#21D7FF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod3-title" value="MÓDULO 3: NUCCORE" style="text;html=1;strokeColor=none;fillColor=#21D7FF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-search" value="NuccoreSearch.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="240" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-detail" value="NuccoreDetail.tsx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="270" width="150" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-features" value="Secciones Colapsables&#xa;Metadatos Estructurados" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="610" y="300" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mod3-reqs" value="R15-R19" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#21D7FF;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="610" y="325" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Módulo 4: Transversal -->
+        <mxCell id="mod4-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="210" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mod4-title" value="MÓDULO 4: TRANSVERSAL" style="text;html=1;strokeColor=none;fillColor=#2E7D32;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="790" y="210" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-help" value="Ayuda Contextual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="240" width="130" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-tooltips" value="Tooltips (R2)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="265" width="130" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-errors" value="Mensajes de Error" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="290" width="130" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-design" value="Diseño Unificado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="315" width="130" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="mod4-reqs" value="R21-R24" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#2E7D32;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="790" y="325" width="150" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- UI Components Layer -->
+        <mxCell id="ui-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#BDBDBD;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="365" width="720" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-label" value="CAPA UI: shadcn/ui + Radix UI (50+ componentes)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="230" y="368" width="300" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-components" value="Button | Card | Tabs | Table | Dialog | Tooltip | Collapsible | Select | Input | Badge | Slider | Checkbox..." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="230" y="385" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Styling Layer -->
+        <mxCell id="style-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#BDBDBD;strokeWidth=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="430" width="720" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="style-label" value="CAPA ESTILOS: Tailwind CSS 4" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="230" y="433" width="200" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="color1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FC10C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="455" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="color2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#704BFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="255" y="455" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="color3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#21D7FF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="455" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="color4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E1E1E;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="455" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="style-desc" value="globals.css | Design Tokens | Responsive | Dark Mode Support" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="340" y="455" width="350" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- LocalStorage -->
+        <mxCell id="storage" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="510" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-label" value="localStorage" style="text;html=1;strokeColor=none;fillColor=#FFB300;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="200" y="510" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="storage-items" value="• blastRecentSearches (R25)&#xa;• blastFavorites (R26)&#xa;• nuccoreFavorites (R26)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="210" y="532" width="180" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Deployment -->
+        <mxCell id="deploy-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="620" width="800" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="deploy-label" value="DEPLOYMENT" style="text;html=1;strokeColor=none;fillColor=#1976D2;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="180" y="620" width="100" height="18" as="geometry" />
+        </mxCell>
+
+        <mxCell id="docker" value="Docker&#xa;Container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0DB7ED;strokeColor=#066D8D;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="650" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nginx" value="Nginx&#xa;Web Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#009639;strokeColor=#006624;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vite" value="Vite&#xa;Build Tool" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#646CFF;strokeColor=#4149A6;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="650" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ibm" value="IBM Code Engine&#xa;(Cloud)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#054ADA;strokeColor=#032E8A;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="500" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="url" value="https://blast-service.22uiqudhp7kt.&#xa;us-south.codeengine.appdomain.cloud" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#1976D2;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="620" y="655" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#757575;strokeWidth=2;" edge="1" parent="1" source="user" target="browser-container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#704BFF;strokeWidth=1;" edge="1" parent="1" source="app-state" target="mod1-container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#704BFF;strokeWidth=1;" edge="1" parent="1" source="app-state" target="mod2-container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#704BFF;strokeWidth=1;" edge="1" parent="1" source="app-state" target="mod3-container">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Flow arrows between modules -->
+        <mxCell id="flow1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FC10C3;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="280" as="sourcePoint" />
+            <mxPoint x="410" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow2" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#704BFF;strokeWidth=2;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="280" as="sourcePoint" />
+            <mxPoint x="600" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="510" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="FLUJO DE NAVEGACIÓN" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="430" y="515" width="150" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-flow" value="Home → SearchForm → Searching → Results → Detail" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="430" y="532" width="320" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-flow2" value="Home → NuccoreSearch → NuccoreDetail" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="430" y="550" width="320" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-state" value="Estado manejado por: useState + useEffect en App.tsx" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="430" y="565" width="320" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Tech Stack -->
+        <mxCell id="tech" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="510" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-title" value="TECH STACK" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=1;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="780" y="515" width="100" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="tech-items" value="React 18 + TypeScript&#xa;Tailwind CSS 4&#xa;shadcn/ui + Radix UI&#xa;Recharts + Lucide Icons" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="780" y="532" width="170" height="50" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
