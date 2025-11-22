@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="22.1.0" type="device">
+  <diagram id="screens-architecture" name="Arquitectura de Pantallas">
+    <mxGraphModel dx="1434" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título Principal -->
+        <mxCell id="title" value="ARQUITECTURA DE PANTALLAS - GenBank BLAST Redesign" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Flujo de navegación y estructura de pantallas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="450" y="55" width="400" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 1: HOME ==================== -->
+        <mxCell id="screen-home" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FC10C3;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="home-header" value="BLAST Home" style="text;html=1;strokeColor=none;fillColor=#FC10C3;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="home-logo" value="🧬 BLAST&#xa;Logo + Gradiente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=10;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="60" y="165" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="home-blastn" value="BLAST N&#xa;(Nucleótidos)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#21D7FF;strokeColor=#0097A7;fontSize=11;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="225" width="85" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="home-blastp" value="BLAST P&#xa;(Proteínas)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#704BFF;strokeColor=#4527A0;fontSize=11;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="225" width="85" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="home-nuccore" value="Base de Datos NUCCORE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FC10C3;fontSize=10;fontColor=#FC10C3;" vertex="1" parent="1">
+          <mxGeometry x="60" y="285" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="home-info" value="Información del servicio" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#BDBDBD;" vertex="1" parent="1">
+          <mxGeometry x="60" y="330" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="home-screen-label" value="Pantalla 1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FC10C3;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="405" width="220" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 2: CONFIGURACIÓN BLAST ==================== -->
+        <mxCell id="screen-config" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#704BFF;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="280" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="config-header" value="Configuración BLAST" style="text;html=1;strokeColor=none;fillColor=#704BFF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="280" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Sidebar -->
+        <mxCell id="config-sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="160" width="80" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="config-mode" value="Modo&#xa;Búsqueda&#xa;(R7)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FC10C3;strokeColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="335" y="165" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="config-history" value="Historial&#xa;(R25)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="335" y="210" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="config-tips" value="Consejos&#xa;(R21)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="335" y="250" width="70" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="config-help" value="Info BLAST&#xa;(R21)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="335" y="290" width="70" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Main Content -->
+        <mxCell id="config-examples" value="Ejemplos Predefinidos (R3)&#xa;[Spike] [Hemoglobina] [Insulina]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4F9;strokeColor=#FC10C3;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="config-sequence" value="Secuencia de Consulta&#xa;[Textarea + Tooltips (R2)]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="420" y="205" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="config-params" value="Parámetros Básicos&#xa;Database | Algorithm&#xa;Organism (R4 Autocompletado)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="420" y="255" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="config-advanced" value="▼ Parámetros Avanzados (R1)&#xa;[Colapsable - Modo Experto]&#xa;E-value, Word Size, Matrix..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="310" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="config-validation" value="⚠️ Validación Previa (R5, R22)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4F4;strokeColor=#F44336;fontSize=8;fontColor=#D32F2F;" vertex="1" parent="1">
+          <mxGeometry x="330" y="365" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="config-submit" value="Ejecutar BLAST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FC10C3;strokeColor=none;fontSize=10;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="365" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="config-tabs" value="[Protein BLAST] [Nucleotide BLAST]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="170" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="config-screen-label" value="Pantalla 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#704BFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="505" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="config-reqs" value="R1, R2, R3, R4, R5, R7, R21, R22, R25" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#BDBDBD;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="420" width="280" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 3: BÚSQUEDA EN PROGRESO ==================== -->
+        <mxCell id="screen-searching" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#21D7FF;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="530" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="searching-header" value="Búsqueda en Progreso" style="text;html=1;strokeColor=none;fillColor=#21D7FF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="320" y="530" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="searching-progress" value="████████░░░░ 65%&#xa;Buscando secuencias similares..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#21D7FF;fontSize=10;fontColor=#0097A7;" vertex="1" parent="1">
+          <mxGeometry x="340" y="575" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="searching-info" value="RID: BLAST123 | Tiempo: 45s" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="340" y="625" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="searching-cancel" value="Cancelar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="340" y="645" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="searching-label" value="Pantalla 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#21D7FF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="675" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 4: RESULTADOS BLAST ==================== -->
+        <mxCell id="screen-results" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D32;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="340" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="results-header" value="Resultados BLAST" style="text;html=1;strokeColor=none;fillColor=#2E7D32;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="340" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Summary Banner -->
+        <mxCell id="results-summary" value="✓ 150 secuencias encontradas (R14)&#xa;Top hit: SARS-CoV-2 (97% identidad)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#81C784;fontSize=9;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="670" y="160" width="320" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Sidebar Filters -->
+        <mxCell id="results-sidebar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="210" width="90" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="results-quick-filters" value="Filtros&#xa;Rápidos&#xa;(R13)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FC10C3;strokeColor=none;fontSize=8;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="675" y="215" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="results-custom-filters" value="E-value ≤&#xa;Identity ≥&#xa;Coverage ≥" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=7;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="675" y="260" width="80" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="results-export" value="Exportar&#xa;CSV/FASTA&#xa;(R11)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="675" y="310" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="results-favorites" value="★ Favoritos&#xa;(R26)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;fontSize=8;fontColor=#F57C00;" vertex="1" parent="1">
+          <mxGeometry x="675" y="355" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Main Tabs -->
+        <mxCell id="results-tabs" value="[Descripciones] [Vista Gráfica] [Alineamientos] [Taxonomía]" style="text;html=1;strokeColor=none;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#1E1E1E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="210" width="220" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Table -->
+        <mxCell id="results-table" value="Tabla Ordenable (R8)&#xa;Score ▼ | E-value | Identity | Coverage&#xa;─────────────────────&#xa;YP_009724390 | 173 | 5e-48 | 97%&#xa;YP_009825051 | 69 | 3e-12 | 52%&#xa;NP_150077 | 67 | 2e-11 | 76%&#xa;..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="770" y="235" width="220" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Alignment Preview -->
+        <mxCell id="results-alignment" value="Vista Alineamiento (R20)&#xa;Query: MFVFLVLLPLVSS...&#xa;       |||||||||||&#xa;Sbjct: MFVFLVLLPLVSS..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;fontFamily=Courier New;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="770" y="340" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- No Results Message -->
+        <mxCell id="results-empty" value="⚠ Sin resultados (R12)&#xa;Mensaje claro + sugerencias" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;fontSize=8;fontColor=#F57C00;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="415" width="220" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="results-highlight" value="Resaltado términos (R9)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="770" y="455" width="130" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="results-views" value="Vista combinada (R10)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="770" y="470" width="130" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="results-screen-label" value="Pantalla 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#2E7D32;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="545" width="340" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="results-reqs" value="R8, R9, R10, R11, R12, R13, R14, R20, R26" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#BDBDBD;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="660" y="490" width="340" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 5: NUCCORE SEARCH ==================== -->
+        <mxCell id="screen-nuccore" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FF6F00;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="450" width="220" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-header" value="NUCCORE Search" style="text;html=1;strokeColor=none;fillColor=#FF6F00;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="40" y="450" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-search-bar" value="🔍 Buscar organismos, accessions..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-filters" value="Filtros Rápidos (R13)&#xa;Length | Country | Date&#xa;Complete Genome ☑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="50" y="525" width="95" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-views" value="Vistas (R10)&#xa;[List]&#xa;[Table]&#xa;[Combined]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="155" y="525" width="95" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-summary" value="📊 Resumen Inteligente (R14)&#xa;6 resultados | Influenza A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;fontSize=8;fontColor=#1976D2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="585" width="200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-results" value="OF023917.1 - Influenza A...&#xa;NC_045512.2 - SARS-CoV-2...&#xa;OF023916.1 - Influenza A..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="625" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-export" value="[CSV] [FASTA] (R11)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="50" y="685" width="100" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-fav" value="★ (R26)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#FFB300;" vertex="1" parent="1">
+          <mxGeometry x="180" y="685" width="50" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-history" value="📜 Historial (R25)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="50" y="705" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-tutorial" value="❓ Tutorial (R23)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="140" y="705" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-screen-label" value="Pantalla 5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FF6F00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="775" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nuccore-reqs" value="R9, R10, R11, R12, R13, R14, R23, R25, R26" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#BDBDBD;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="725" width="220" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PANTALLA 6: NUCCORE DETAIL ==================== -->
+        <mxCell id="screen-detail" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E65100;strokeWidth=3;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="120" width="280" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="detail-header" value="NUCCORE Detail" style="text;html=1;strokeColor=none;fillColor=#E65100;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="120" width="280" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-title" value="OF023917.1&#xa;Influenza A virus vaccine composition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="160" width="260" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-actions" value="[Copy Sequence (R17)] [Download FASTA] [Share]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="205" width="260" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-tabs" value="[GenBank] [FASTA] [Metadata] [Graphics]" style="text;html=1;strokeColor=none;fillColor=#F5F5F5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#1E1E1E;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="225" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Collapsible Sections -->
+        <mxCell id="detail-locus" value="▼ LOCUS (R15) ❓(R16)&#xa;OF023917 | 1435 bp | RNA linear" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="250" width="260" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="detail-definition" value="▼ DEFINITION (R15) ❓(R16)&#xa;Recombinant Influenza A virus..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="290" width="260" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="detail-source" value="▶ SOURCE &amp; ORGANISM (R15)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#E0E0E0;fontSize=8;fontColor=#757575;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="330" width="260" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Structured Metadata -->
+        <mxCell id="detail-metadata" value="Metadatos Estructurados (R19)&#xa;┌────────────┬────────────┐&#xa;│ Isolate    │ A/H5N8     │&#xa;│ Country    │ South Korea│&#xa;│ Date       │ 2020-06-15 │&#xa;│ Host       │ H. sapiens │&#xa;└────────────┴────────────┘" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#81C784;fontSize=7;fontColor=#1E1E1E;fontFamily=Courier New;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="360" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Cross Links -->
+        <mxCell id="detail-links" value="Enlaces (R18)&#xa;→ Proteins&#xa;→ Genes&#xa;→ PubMed&#xa;→ BioProject" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;fontSize=8;fontColor=#1976D2;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="360" width="90" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-origin" value="▼ ORIGIN [Copy (R17)]&#xa;1 gaaaatggat tcaaataca..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=8;fontColor=#1E1E1E;fontFamily=Courier New;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="455" width="260" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-help-dialog" value="❓ Diálogo de Ayuda (R16)&#xa;Explicación de términos técnicos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;fontSize=8;fontColor=#F57C00;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="detail-screen-label" value="Pantalla 6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#E65100;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="545" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="detail-reqs" value="R15, R16, R17, R18, R19" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#BDBDBD;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="535" width="280" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ELEMENTOS TRANSVERSALES ==================== -->
+        <mxCell id="transversal-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#9E9E9E;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="600" width="680" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="transversal-label" value="ELEMENTOS TRANSVERSALES (Todas las pantallas)" style="text;html=1;strokeColor=none;fillColor=#9E9E9E;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="660" y="600" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trans-tooltips" value="Tooltips (R2)&#xa;Ayuda en cada&#xa;parámetro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="680" y="630" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-help" value="Ayuda&#xa;Contextual (R21)&#xa;Panel lateral" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="790" y="630" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-errors" value="Mensajes&#xa;de Error (R22)&#xa;Anticipados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="900" y="630" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-design" value="Diseño&#xa;Unificado (R24)&#xa;Header + Colores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="630" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-history" value="Historial (R25)&#xa;Favoritos (R26)&#xa;localStorage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#FFB300;fontSize=9;fontColor=#F57C00;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="630" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="trans-tutorial" value="Tutorial&#xa;(R23)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E0E0E0;fontSize=9;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="630" width="90" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== FLECHAS DE NAVEGACIÓN ==================== -->
+        <!-- Home -> Config -->
+        <mxCell id="arrow-home-config" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FC10C3;strokeWidth=3;entryX=0;entryY=0.3;entryDx=0;entryDy=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="230" as="sourcePoint" />
+            <mxPoint x="320" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-1" value="Seleccionar&#xa;BLAST N/P" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#FC10C3;" vertex="1" parent="1">
+          <mxGeometry x="260" y="195" width="60" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Config -> Searching -->
+        <mxCell id="arrow-config-search" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#704BFF;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="500" as="sourcePoint" />
+            <mxPoint x="460" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-2" value="Ejecutar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#704BFF;" vertex="1" parent="1">
+          <mxGeometry x="470" y="510" width="50" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Searching -> Results -->
+        <mxCell id="arrow-search-results" value="" style="endArrow=classic;html=1;rounded=1;strokeColor=#21D7FF;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="600" as="sourcePoint" />
+            <mxPoint x="660" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="600" />
+              <mxPoint x="630" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-3" value="Completado" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#21D7FF;" vertex="1" parent="1">
+          <mxGeometry x="610" y="520" width="50" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Home -> NUCCORE -->
+        <mxCell id="arrow-home-nuccore" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#FF6F00;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="400" as="sourcePoint" />
+            <mxPoint x="150" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-4" value="NUCCORE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#FF6F00;" vertex="1" parent="1">
+          <mxGeometry x="160" y="420" width="50" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- NUCCORE -> Detail -->
+        <mxCell id="arrow-nuccore-detail" value="" style="endArrow=classic;html=1;rounded=1;strokeColor=#E65100;strokeWidth=3;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="550" as="sourcePoint" />
+            <mxPoint x="1060" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="550" />
+              <mxPoint x="290" y="820" />
+              <mxPoint x="1040" y="820" />
+              <mxPoint x="1040" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-5" value="Ver Detalle" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="620" y="800" width="60" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Results -> Detail (optional) -->
+        <mxCell id="arrow-results-detail" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=2;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="330" as="sourcePoint" />
+            <mxPoint x="1060" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow-label-6" value="Ver en&#xa;GenBank" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;fontColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="300" width="40" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
