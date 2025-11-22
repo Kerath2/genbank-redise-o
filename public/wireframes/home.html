@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAST Home - Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #1e1e1e;
+        }
+
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #21D7FF, #704BFF, #FC10C3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            color: #1e1e1e;
+            margin-bottom: 2px;
+        }
+
+        .logo-text p {
+            font-size: 13px;
+            color: #757575;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #1e1e1e;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #757575;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #1e1e1e;
+            margin-bottom: 24px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #FC10C3;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .icon-blue {
+            background: linear-gradient(135deg, #21D7FF, #704BFF);
+        }
+
+        .icon-pink {
+            background: linear-gradient(135deg, #C920FF, #FC10C3);
+        }
+
+        .icon-purple {
+            background: linear-gradient(135deg, #704BFF, #9D4BFF);
+        }
+
+        .arrow {
+            color: #21D7FF;
+            font-size: 20px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .card:hover .arrow {
+            opacity: 1;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #1e1e1e;
+            margin-bottom: 4px;
+        }
+
+        .card .subtitle {
+            font-size: 13px;
+            color: #757575;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #757575;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #81c784;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-alt {
+            background-color: #fce4ec;
+            color: #c2185b;
+            border-color: #f48fb1;
+        }
+
+        .footer-note {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-note h4 {
+            font-size: 16px;
+            color: #1e1e1e;
+            margin-bottom: 8px;
+        }
+
+        .footer-note p {
+            font-size: 14px;
+            color: #757575;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-icon">🧬</div>
+            <div class="logo-text">
+                <h1>BLAST</h1>
+                <p>Basic Local Alignment Search Tool</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2>Basic Local Alignment Search Tool</h2>
+            <p>BLAST finds regions of similarity between biological sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance.</p>
+        </div>
+
+        <h3 class="section-title">Select BLAST Program</h3>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-blue">🧬</div>
+                    <div class="arrow">→</div>
+                </div>
+                <h3>Nucleotide BLAST</h3>
+                <p class="subtitle">nucleotide → nucleotide</p>
+                <p>Search nucleotide databases using a nucleotide query. Compare DNA or RNA sequences to identify similar sequences in the database.</p>
+                <div>
+                    <span class="badge">Available</span>
+                    <span style="font-size: 12px; color: #757575; margin-left: 8px;">BLASTN</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-pink">💊</div>
+                    <div class="arrow">→</div>
+                </div>
+                <h3>Protein BLAST</h3>
+                <p class="subtitle">protein → protein</p>
+                <p>Search protein databases using a protein query. Compare amino acid sequences to identify evolutionarily related proteins.</p>
+                <div>
+                    <span class="badge">Available</span>
+                    <span style="font-size: 12px; color: #757575; margin-left: 8px;">BLASTP</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-purple">🔬</div>
+                    <div class="arrow">→</div>
+                </div>
+                <h3>blastx</h3>
+                <p class="subtitle">nucleotide → protein</p>
+                <p>Search protein databases using a translated nucleotide query. Compares the six-frame translation of a nucleotide query sequence.</p>
+                <div>
+                    <span class="badge badge-alt">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Database Search</h3>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4CAF50, #81C784);">🗄️</div>
+                    <div class="arrow">→</div>
+                </div>
+                <h3>NUCCORE Database</h3>
+                <p class="subtitle">Nucleotide Database Search</p>
+                <p>Search and retrieve nucleotide sequences from GenBank, RefSeq, and other databases. Access complete genomes, mRNA, and more.</p>
+                <div>
+                    <span class="badge">Available</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <h4>About BLAST</h4>
+            <p>The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance of matches. BLAST can be used to infer functional and evolutionary relationships between sequences as well as help identify members of gene families.</p>
+        </div>
+    </div>
+</body>
+</html>

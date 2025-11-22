@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLAST Results - Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #1e1e1e;
+        }
+
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+            background: white;
+            color: #757575;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .button:hover {
+            border-color: #FC10C3;
+            color: #FC10C3;
+        }
+
+        .button-icon {
+            background: linear-gradient(135deg, #21D7FF, #704BFF, #FC10C3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-title h1 {
+            font-size: 24px;
+            color: #1e1e1e;
+            margin-bottom: 8px;
+        }
+
+        .header-info {
+            display: flex;
+            gap: 24px;
+            font-size: 13px;
+            color: #757575;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 40px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card-header {
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            font-size: 12px;
+            color: #1e1e1e;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .filter-item:hover {
+            background: #fafafa;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 3px;
+        }
+
+        .checkbox.checked {
+            background: #FC10C3;
+            border-color: #FC10C3;
+            position: relative;
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            top: -2px;
+            left: 2px;
+        }
+
+        .count {
+            margin-left: auto;
+            color: #757575;
+            font-size: 11px;
+        }
+
+        .slider-container {
+            margin: 12px 0;
+        }
+
+        .slider-label {
+            font-size: 12px;
+            color: #757575;
+            margin-bottom: 8px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .slider-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #21D7FF, #FC10C3);
+            border-radius: 2px;
+            width: 30%;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tabs {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            padding: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #757575;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .tab.active {
+            background: #fef7fb;
+            color: #FC10C3;
+            font-weight: 600;
+        }
+
+        .results-header {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .results-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .results-count {
+            font-size: 14px;
+            color: #1e1e1e;
+        }
+
+        .results-count strong {
+            font-weight: 600;
+        }
+
+        .results-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button-small {
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            color: #757575;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .button-small:hover {
+            border-color: #FC10C3;
+            color: #FC10C3;
+        }
+
+        .view-switcher {
+            display: flex;
+            gap: 4px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 4px;
+        }
+
+        .view-button {
+            padding: 6px 12px;
+            border: none;
+            background: transparent;
+            color: #757575;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .view-button.active {
+            background: #fef7fb;
+            color: #FC10C3;
+        }
+
+        .result-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .result-item:hover {
+            border-color: #FC10C3;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .result-header {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .result-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 3px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .result-number {
+            color: #757575;
+            font-size: 13px;
+            min-width: 24px;
+        }
+
+        .result-content {
+            flex: 1;
+        }
+
+        .result-title {
+            font-size: 14px;
+            color: #0066CC;
+            margin-bottom: 8px;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .result-title:hover {
+            text-decoration: underline;
+        }
+
+        .result-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .badge-score {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-evalue {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-identity {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .badge-coverage {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .result-meta {
+            font-size: 12px;
+            color: #757575;
+            line-height: 1.6;
+        }
+
+        .result-organism {
+            font-style: italic;
+            color: #1e1e1e;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .result-link {
+            font-size: 12px;
+            color: #0066CC;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .result-link:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .page-button {
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            color: #757575;
+        }
+
+        .page-button:hover {
+            border-color: #FC10C3;
+            color: #FC10C3;
+        }
+
+        .page-button.active {
+            background: #FC10C3;
+            color: white;
+            border-color: #FC10C3;
+        }
+
+        .page-input {
+            width: 60px;
+            text-align: center;
+            padding: 6px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .alignment-bar {
+            height: 24px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            position: relative;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        .alignment-segment {
+            position: absolute;
+            height: 100%;
+            background: #FC10C3;
+            top: 0;
+        }
+
+        .alignment-legend {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #757575;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-actions">
+                <button class="button">
+                    <span class="button-icon">🧬</span>
+                    BLAST Home
+                </button>
+                <button class="button">
+                    ← Nueva Búsqueda
+                </button>
+                <button class="button">
+                    ✏️ Editar Búsqueda
+                </button>
+            </div>
+            <div class="header-title">
+                <h1>Resultados BLAST</h1>
+                <div class="header-info">
+                    <div class="info-item">
+                        <span>📋</span>
+                        <span><strong>Job:</strong> Spike_Protein_Analysis</span>
+                    </div>
+                    <div class="info-item">
+                        <span>🔑</span>
+                        <span><strong>RID:</strong> PBLAST U88024</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="status-badge">
+                            <span>✓</span>
+                            <span>Search completed successfully</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        🔍 Quick Filters
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="filter-item">
+                        <div class="checkbox checked"></div>
+                        <span>High identity (>90%)</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="checkbox"></div>
+                        <span>Moderate identity (50-90%)</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="checkbox"></div>
+                        <span>E-value < 1e-50</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="checkbox"></div>
+                        <span>Coverage > 80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        ⚙️ Custom Filters
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slider-container">
+                        <div class="slider-label">Minimum % Identity: 0%</div>
+                        <div class="slider">
+                            <div class="slider-fill"></div>
+                        </div>
+                    </div>
+                    <div class="slider-container">
+                        <div class="slider-label">Minimum Coverage (%): 0%</div>
+                        <div class="slider">
+                            <div class="slider-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        🧬 Species
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="filter-item">
+                        <div class="checkbox checked"></div>
+                        <span>Viruses</span>
+                        <span class="count">(1439887)</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="checkbox"></div>
+                        <span>Animals</span>
+                        <span class="count">(647)</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="checkbox"></div>
+                        <span>Bacteria</span>
+                        <span class="count">(6972)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        ⭐ Favorites
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p style="font-size: 12px; color: #757575;">
+                        No favorites yet. Click the star icon to add results.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="tabs">
+                <button class="tab active">
+                    📝 Descriptions
+                </button>
+                <button class="tab">
+                    📊 Graphic View
+                </button>
+                <button class="tab">
+                    🔤 Alignments
+                </button>
+                <button class="tab">
+                    🌳 Taxonomy
+                </button>
+            </div>
+
+            <div class="results-header">
+                <div class="results-stats">
+                    <div class="results-count">
+                        Items: <strong>1 to 20 of 150</strong>
+                    </div>
+                    <div class="results-actions">
+                        <button class="button-small">
+                            📥 Download CSV
+                        </button>
+                        <button class="button-small">
+                            📄 Download FASTA
+                        </button>
+                        <div class="view-switcher">
+                            <button class="view-button active">List</button>
+                            <button class="view-button">Table</button>
+                            <button class="view-button">Combined</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Items -->
+            <div class="result-item">
+                <div class="result-header">
+                    <div class="result-checkbox"></div>
+                    <div class="result-number">1.</div>
+                    <div class="result-content">
+                        <div class="result-title">
+                            YP_009724390.1 surface glycoprotein [Severe acute respiratory syndrome coronavirus 2]
+                        </div>
+                        <div class="result-badges">
+                            <span class="badge badge-score">Score: 173</span>
+                            <span class="badge badge-evalue">E-value: 5e-48</span>
+                            <span class="badge badge-identity">Identity: 97%</span>
+                            <span class="badge badge-coverage">Coverage: 100%</span>
+                        </div>
+                        <div class="result-meta">
+                            Organism: <span class="result-organism">Severe acute respiratory syndrome coronavirus 2</span><br>
+                            Accession: YP_009724390.1 • Length: 1273 aa
+                        </div>
+                        <div class="alignment-bar">
+                            <div class="alignment-segment" style="left: 0%; width: 100%;"></div>
+                        </div>
+                        <div class="alignment-legend">
+                            <span>Query: 1-84</span>
+                            <span>Subject: 1-84</span>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="result-link">GenBank →</a>
+                            <a href="#" class="result-link">FASTA →</a>
+                            <a href="#" class="result-link">Graphics →</a>
+                            <a href="#" class="result-link">⭐ Add to Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-header">
+                    <div class="result-checkbox"></div>
+                    <div class="result-number">2.</div>
+                    <div class="result-content">
+                        <div class="result-title">
+                            QHD43416.1 surface glycoprotein [Severe acute respiratory syndrome coronavirus 2]
+                        </div>
+                        <div class="result-badges">
+                            <span class="badge badge-score">Score: 173</span>
+                            <span class="badge badge-evalue">E-value: 6e-48</span>
+                            <span class="badge badge-identity">Identity: 97%</span>
+                            <span class="badge badge-coverage">Coverage: 100%</span>
+                        </div>
+                        <div class="result-meta">
+                            Organism: <span class="result-organism">Severe acute respiratory syndrome coronavirus 2</span><br>
+                            Accession: QHD43416.1 • Length: 1273 aa
+                        </div>
+                        <div class="alignment-bar">
+                            <div class="alignment-segment" style="left: 0%; width: 100%;"></div>
+                        </div>
+                        <div class="alignment-legend">
+                            <span>Query: 1-84</span>
+                            <span>Subject: 1-84</span>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="result-link">GenBank →</a>
+                            <a href="#" class="result-link">FASTA →</a>
+                            <a href="#" class="result-link">Graphics →</a>
+                            <a href="#" class="result-link">⭐ Add to Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-header">
+                    <div class="result-checkbox"></div>
+                    <div class="result-number">3.</div>
+                    <div class="result-content">
+                        <div class="result-title">
+                            AVP78042.1 surface glycoprotein [Bat SARS-like coronavirus]
+                        </div>
+                        <div class="result-badges">
+                            <span class="badge badge-score">Score: 142</span>
+                            <span class="badge badge-evalue">E-value: 2e-38</span>
+                            <span class="badge badge-identity">Identity: 89%</span>
+                            <span class="badge badge-coverage">Coverage: 96%</span>
+                        </div>
+                        <div class="result-meta">
+                            Organism: <span class="result-organism">Bat SARS-like coronavirus</span><br>
+                            Accession: AVP78042.1 • Length: 1269 aa
+                        </div>
+                        <div class="alignment-bar">
+                            <div class="alignment-segment" style="left: 2%; width: 94%;"></div>
+                        </div>
+                        <div class="alignment-legend">
+                            <span>Query: 3-84</span>
+                            <span>Subject: 3-81</span>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="result-link">GenBank →</a>
+                            <a href="#" class="result-link">FASTA →</a>
+                            <a href="#" class="result-link">Graphics →</a>
+                            <a href="#" class="result-link">⭐ Add to Favorites</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-button">« First</button>
+                <button class="page-button">‹ Prev</button>
+                <span style="font-size: 13px; color: #757575; display: flex; align-items: center; gap: 8px;">
+                    Page <input type="text" class="page-input" value="1"> of 8
+                </span>
+                <button class="page-button">Next ›</button>
+                <button class="page-button">Last »</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
