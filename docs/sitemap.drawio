@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-01-15T10:00:00.000Z" agent="draw.io" version="22.1.0" type="device">
+  <diagram name="Sitemap GenBank Redesign" id="sitemap-genbank">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title" value="SITEMAP - GenBank Redesign" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1E1E1E;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 0: HOME ========== -->
+        <mxCell id="home" value="🏠 HOME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E3A5F;strokeColor=#1E3A5F;fontColor=#FFFFFF;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 1: Módulos principales ========== -->
+        <!-- BLAST -->
+        <mxCell id="blast" value="🔬 BLAST Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E7D32;strokeColor=#2E7D32;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- NUCCORE -->
+        <mxCell id="nuccore" value="🧬 NUCCORE Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565C0;strokeColor=#1565C0;fontColor=#FFFFFF;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="220" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones Home -> Nivel 1 -->
+        <mxCell id="arrow-home-blast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="home" target="blast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-home-nuccore" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="home" target="nuccore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 2: Subpantallas BLAST ========== -->
+        <!-- BLASTN Config -->
+        <mxCell id="blastn" value="BLASTN&#xa;(Nucleótidos)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4CAF50;strokeColor=#2E7D32;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="320" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- BLASTP Config -->
+        <mxCell id="blastp" value="BLASTP&#xa;(Proteínas)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4CAF50;strokeColor=#2E7D32;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="320" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones BLAST -> Subtipos -->
+        <mxCell id="arrow-blast-blastn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;" edge="1" parent="1" source="blast" target="blastn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-blast-blastp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;" edge="1" parent="1" source="blast" target="blastp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 3: Resultados BLAST ========== -->
+        <mxCell id="blast-results" value="📊 Resultados BLAST" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81C784;strokeColor=#2E7D32;fontColor=#1E1E1E;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="420" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones Config -> Results -->
+        <mxCell id="arrow-blastn-results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;dashed=1;" edge="1" parent="1" source="blastn" target="blast-results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-blastp-results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;dashed=1;" edge="1" parent="1" source="blastp" target="blast-results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 4: Detalle Alineamiento -->
+        <mxCell id="alignment-detail" value="🔍 Detalle&#xa;Alineamiento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;fontColor=#1E1E1E;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="140" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Descarga -->
+        <mxCell id="download-blast" value="⬇️ Descarga&#xa;(FASTA/CSV)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;fontColor=#1E1E1E;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="520" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones Results -> Detalles -->
+        <mxCell id="arrow-results-align" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;" edge="1" parent="1" source="blast-results" target="alignment-detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-results-download" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2E7D32;strokeWidth=1;" edge="1" parent="1" source="blast-results" target="download-blast">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 2: NUCCORE Resultados ========== -->
+        <mxCell id="nuccore-results" value="📋 Resultados&#xa;NUCCORE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1565C0;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="320" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexión NUCCORE -> Results -->
+        <mxCell id="arrow-nuccore-results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;dashed=1;" edge="1" parent="1" source="nuccore" target="nuccore-results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 3: Detalle NUCCORE ========== -->
+        <mxCell id="nuccore-detail" value="📄 Detalle&#xa;Registro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#1565C0;fontColor=#1E1E1E;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="420" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Favoritos -->
+        <mxCell id="favorites" value="⭐ Favoritos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#1565C0;fontColor=#1E1E1E;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="420" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones NUCCORE Results -> Detalles -->
+        <mxCell id="arrow-nuccore-detail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;" edge="1" parent="1" source="nuccore-results" target="nuccore-detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-nuccore-fav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;" edge="1" parent="1" source="nuccore-results" target="favorites">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== NIVEL 4: Sub-secciones Detalle NUCCORE ========== -->
+        <mxCell id="sequence-view" value="Secuencia&#xa;Completa" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontColor=#1E1E1E;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="80" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="features-view" value="Features&#xa;(CDS, genes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontColor=#1E1E1E;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="695" y="520" width="80" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="download-nuccore" value="⬇️ Descarga&#xa;(GenBank/FASTA)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;fontColor=#1E1E1E;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="790" y="520" width="90" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones Detalle -> Sub-secciones -->
+        <mxCell id="arrow-detail-seq" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;" edge="1" parent="1" source="nuccore-detail" target="sequence-view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-detail-feat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;" edge="1" parent="1" source="nuccore-detail" target="features-view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-detail-download" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=1;" edge="1" parent="1" source="nuccore-detail" target="download-nuccore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========== CONEXIÓN CRUZADA: BLAST Results -> NUCCORE Detail ========== -->
+        <mxCell id="arrow-blast-nuccore" value="Ver registro" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF9800;strokeWidth=2;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="blast-results" target="nuccore-detail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="445" />
+              <mxPoint x="500" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========== LEYENDA ========== -->
+        <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BDBDBD;" vertex="1" parent="1">
+          <mxGeometry x="920" y="100" width="200" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-title" value="LEYENDA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="105" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-home" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E3A5F;strokeColor=#1E3A5F;" vertex="1" parent="1">
+          <mxGeometry x="935" y="135" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-home-text" value="Home" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="132" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-blast" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E7D32;strokeColor=#2E7D32;" vertex="1" parent="1">
+          <mxGeometry x="935" y="160" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-blast-text" value="Módulo BLAST" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="157" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-nuccore" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565C0;strokeColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="935" y="185" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-nuccore-text" value="Módulo NUCCORE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="182" width="120" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-nav" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="935" y="220" as="sourcePoint" />
+            <mxPoint x="955" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-nav-text" value="Navegación" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="210" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-search" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="935" y="245" as="sourcePoint" />
+            <mxPoint x="955" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-search-text" value="Búsqueda" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="235" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-cross" value="" style="endArrow=classic;html=1;strokeColor=#FF9800;strokeWidth=2;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="935" y="268" as="sourcePoint" />
+            <mxPoint x="955" y="268" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-cross-text" value="Enlace cruzado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="965" y="258" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ========== ELEMENTOS GLOBALES ========== -->
+        <mxCell id="global-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="620" width="920" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="global-title" value="🌐 ELEMENTOS GLOBALES (presentes en todas las pantallas)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="110" y="625" width="400" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="global-items" value="📍 Header con navegación  |  ℹ️ Tooltips informativos  |  📜 Historial de búsquedas (localStorage)  |  ♿ Accesibilidad WCAG  |  🔗 Breadcrumbs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#424242;" vertex="1" parent="1">
+          <mxGeometry x="110" y="650" width="900" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
